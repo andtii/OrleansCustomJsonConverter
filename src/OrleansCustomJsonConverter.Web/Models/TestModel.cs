@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace OrleansMultiClusterExample.Web.Models;
+namespace OrleansCustomJsonConverter.Web.Models;
 
 public class TestModel
 {

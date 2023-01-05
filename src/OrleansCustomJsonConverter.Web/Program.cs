@@ -3,9 +3,9 @@ using Orleans;
 using Orleans.Runtime;
 using Orleans.Hosting;
 using Orleans.Configuration;
-using OrleansMultiClusterExample.Web;
-using OrleansMultiClusterExample.Web.Grains;
-using OrleansMultiClusterExample.Web.Models;
+using OrleansCustomJsonConverter.Web;
+using OrleansCustomJsonConverter.Web.Grains;
+using OrleansCustomJsonConverter.Web.Models;
 using System.Globalization;
 using Orleans.Serialization;
 using System.Text.Json;
@@ -26,7 +26,7 @@ builder.Host.UseOrleans((ctx, siloBuilder) =>
      siloBuilder.Services.AddSerializer(serializerBuilder =>
      {
          serializerBuilder.AddJsonSerializer(
-             isSupported: type => type.Namespace.StartsWith("OrleansMultiClusterExample.Web")
+             isSupported: type => type.Namespace.StartsWith("OrleansCustomJsonConverter.Web")
              );
      });
 

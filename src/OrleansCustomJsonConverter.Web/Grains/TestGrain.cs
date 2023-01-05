@@ -1,22 +1,22 @@
 ﻿
 
 using Orleans;
-using OrleansMultiClusterExample.Web.Models;
+using OrleansCustomJsonConverter.Web.Models;
 
-namespace OrleansMultiClusterExample.Web.Grains
+namespace OrleansCustomJsonConverter.Web.Grains
 {
     public class TestGrain : ITestGrain
     {
-        private readonly IClusterClient clusterClient;
+        private readonly IClusterClient _clusterClient;
 
         public TestGrain(IClusterClient clusterClient)
         {
-            this.clusterClient = clusterClient;
+            _clusterClient = clusterClient;
         }
 
-        public Task<TestModel> Dosomething(TestModel weather)
+        public Task<TestModel> Dosomething(TestModel testModel)
         {
-            return Task.FromResult(weather);
+            return Task.FromResult(testModel);
         }
 
     }

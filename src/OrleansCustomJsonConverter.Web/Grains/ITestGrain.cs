@@ -1,12 +1,12 @@
 ﻿using Orleans;
-using OrleansMultiClusterExample.Web.Models;
+using OrleansCustomJsonConverter.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrleansMultiClusterExample.Web.Grains
+namespace OrleansCustomJsonConverter.Web.Grains
 {
     public interface ITestGrain : IGrainWithStringKey
     {

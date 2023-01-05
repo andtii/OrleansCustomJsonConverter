@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace OrleansMultiClusterExample.Web.Models;
+namespace OrleansCustomJsonConverter.Web.Models;
 
 public class StronglyTypedIdJsonConverter<TStronglyTypedId, TValue> : JsonConverter<TStronglyTypedId>
 where TStronglyTypedId : StronglyTypedId<TValue>

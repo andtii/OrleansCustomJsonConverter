@@ -1,4 +1,4 @@
-﻿namespace OrleansMultiClusterExample.Web.Models;
+﻿namespace OrleansCustomJsonConverter.Web.Models;
 public abstract record StronglyTypedId<TValue>(TValue Value)
     where TValue : notnull
 {
