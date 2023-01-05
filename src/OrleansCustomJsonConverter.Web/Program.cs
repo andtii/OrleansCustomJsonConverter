@@ -44,8 +44,8 @@ app.MapGet("/test", async (IClusterClient cluster1Client) =>
     };
 
     //This works
-    //var serialized = JsonSerializer.Serialize(testModel);
-    //var backToModel = JsonSerializer.Deserialize<TestModel>(serialized);
+    var serialized = JsonSerializer.Serialize(testModel);
+    var backToModel = JsonSerializer.Deserialize<TestModel>(serialized);
 
     //This fails
     return await cluster1Client.GetGrain<ITestGrain>("").Dosomething(testModel);
